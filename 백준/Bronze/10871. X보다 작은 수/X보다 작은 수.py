@@ -1,17 +1,15 @@
 import sys
 
-def filter_lt(threshold, line, limit=None):
-    nums = list(map(int, line.split()))
-    if limit is not None:
-        nums = nums[:limit]  # 첫 줄의 a개만 쓰고 싶다면 사용
-    result = [str(x) for x in nums if x < threshold]
-    return ' '.join(result)
+input_value = sys.stdin.read().splitlines()
 
-def main():
-    lines = sys.stdin.read().splitlines()
-    a, b = map(int, lines[0].split())  # 예: "10 5"
-    out = filter_lt(b, lines[1], limit=a)
-    print(out)
+len_arr, *find = [int(x) for x in input_value[0].split()]
 
-if __name__ == "__main__":
-    main()
+arr = [int(x) for x in input_value[1].split()]
+
+result = ""
+
+for i in range(0, len_arr):
+    if arr[i] < find[0]:
+        result += str(arr[i])+ " "
+        
+print(result)
