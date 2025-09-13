@@ -1,0 +1,1 @@
+{"name":"Local: hello","url":"/Users/dongkyu/JUNGLE/STUDY_PYTHON/hello.py","tests":[{"id":1757558309753,"input":"5\n-2 4 -99 -1 98","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/dongkyu/JUNGLE/STUDY_PYTHON/hello.py","group":"local","local":true}
