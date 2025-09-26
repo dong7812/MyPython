@@ -7,7 +7,7 @@ limit = int(input_value[0])
 count = 0
 temp = []
 
-def finb(num, arr, goal):
+def finb(arr, goal):
     dp = [0] * (goal + 1)
     
     dp[0] = 1
@@ -25,7 +25,7 @@ for i in input_value[1:]:
         arr = [int(x) for x in temp[1].split()]
         goal = int(temp[2])
         
-        print(finb(num, arr, goal))
+        print(finb(arr, goal))
         
         temp = []
         count = 0
