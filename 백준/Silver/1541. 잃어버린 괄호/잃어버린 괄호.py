@@ -9,7 +9,9 @@ tokens = re.findall(r'\d+|[+-]', input_value)
 
 i = 0
 while i < len(tokens):
+    # +를 만날때마다 연산할 수 있도록
     if tokens[i] == '+':
+        # +기준 앞뒤로 더해보버리기
         s = int(tokens[i-1]) + int(tokens[i+1])
         tokens[i-1:i+2] = [str(s)]
         i = max(0, i-1)  # 바로 앞에서 다시 검사 (스킵 방지)
